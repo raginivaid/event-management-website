@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Creating a Simple Parallax Scrolling Website</title>
+ <link rel="stylesheet" href="css/style.css"/>
+ <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+ <script>
+
+
+   
+<!-- JQUERY FOR SLIDING NAVIGATION-->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!-- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV-->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+</head>
+
+<body>
+<header id="header">
+<div class="content">
+<div id="logo"><a href="index.html"> EVERGREEN </a></div>
+<nav id="nav">
+ <ul>
+ <li><a href="index.html" class="active" title="Next Section">Home</a></li>
+ <li><a href="aboutus.html" title="Next Section">About Us</a></li>
+ <li><a href="services.html" title="Next Section">Services</a></li>
+ <li><a href="gallery.html" title="Next Section">Gallery</a></li>
+ <li><a href="contact-us.html" title="Next Section">Contact Us</a></li>
+ </ul>
+</nav>
+</div>
+</header>
+ <div id="slide1">
+ <div class="content">
+<div id="christmas_tree"> </div> 
+ <div id="snowflakes1"></div>
+
+ <div id="snowflakes2"></div>
+ <br />
+ <br />
+  <h1>EVERGREEN</h1>
+ <div id="divider"> </div>
+ <h3>EVENT MANAGEMENT COMPANY </h3>
+ <div id="ribbon"></div>
+ <div id="new_year"> </div>
+ </div> 
+   <a class="ghost-button" style="margin-left:45%;" href="aboutus.html">About Us</a>
+ </div>
+
+ <div id="slide2">
+ <div class="content" >
+ <div class="quotes_container">
+  <p align="center" style="font-size:55px;">WHO WE ARE?</p>
+ <h3 class="quotes">“Evergreen is a brand name offering spectacular services in organising and managing events, festivals, and corporate as well as personal parties. The best quality of service at very reasonable rate is provided to the clients. Evergreen with a depth of expertise in marketing, boasts of more than 500 leading MNCSs and corporate houses and businesses. ”</h3>
+
+ <!--<img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+ </div>
+
+ <div id="slide3">
+ <div class="content">
+ <div class="quotes_container">
+  
+ <h3 class="quotes" width="30%" style="display:block; padding-left:60%;" align="right">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.” </h3>
+ <h4 class="author_name_white" align="right" style="color:#6A5ACD;">- Norman Vincent Peale </h4>
+ </div> 
+ </div> 
+ </div> 
+ <div id="slide4">
+ <div class="content">
+ <div class="quotes_container">
+ <!--<h3 class="quotes">“Christmas doesn't come from a store, maybe Christmas perhaps means a little bit more....” </h3>
+ <img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ <div class="content-wrapper w-container">
+  <div class="header-box">
+    <!--<p align="center" style="font-size:55px;">OUR SERVICES</p>-->
+    <div class="services_title" style="padding-top:10px;">Our Services
+      <p class="services_intro">WHAT WE CAN DO FOR YOU</p>
+      <p class="services_description">Our team of professionals strives to offer excellence in case services for the benefit of our customers and to meet their demands.</p>
+      
+    </div>
+  </div>
+ </div>
+ </div>
+
+
+      <div class="row">
+
+         <div class="quarter">
+
+          <div class="post">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/lecture.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONFERENCES</p></a>
+            </div>
+          </div>
+        </div>
+
+       
+
+        <div class="quarter">
+
+          <div class="post">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/birthday-cake.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>&nbsp;&nbsp;&nbsp;&nbsp;BIRTHDAY CELEBRATIONS</p></a>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="quarter">
+
+          <div class="post">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/businessmen.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CORPORATE EVENT</p></a>
+
+            </div>
+          </div>
+     
+        </div>
+
+        <div class="quarter" style="margin-left:30px;">
+
+          <div class="post">
+            <a href="">     
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/wedding.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>WEDDING CELEBRATIONS</p></a>
+            
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="quarter" style="margin-left:30px;">
+
+          <div class="post" style="margin-bottom:5px;">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/painting-palette.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>ARTIST MANAGEMENT</p></a>
+            </div>
+          </div>
+        </div>
+
+         <div class="quarter" style="margin-left:30px;">
+
+          <div class="post" style="margin-bottom:5px;">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/museum.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>EXHIBITION ORGANIZER</p></a>
+            </div>
+          </div>
+        </div>
+
+         <div class="quarter" style="margin-left:30px;">
+
+          <div class="post" style="margin-bottom:5px;">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/promotions.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BRAND PROMOTION</p></a>
+            </div>
+          </div> 
+        </div>
+
+        <div class="quarter" style="margin-left:30px;">
+
+          <div class="post" style="margin-bottom:5px;">
+            <a href="">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="img/smartphone.png"></img>
+            </a>
+            <div style="margin-bottom:5px; display:block;">
+              <a href=""><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUCT LAUNCH</p></a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      </div>
+ </div>
+
+ <div id="slide5">
+ <div class="content">
+ <div class="quotes_container">
+
+ <h3 class="quotes"> Evergreen has successfully conceptualized, organized and executed large scale events. We offer a range of creative ideas and unique events solutions to suit every need and budget. </h3>
+ <!--
+ <img src="img/bob.png" align="left"/> <h4 class="author_name_white">Bob Hope </h4>
+-->
+ </div> 
+ </div> 
+ </div> 
+
+
+      <div id="footer">
+            <div class="wrapper">
+              <div class="social_links">
+                <ul>
+                    
+                    <!--<div id="logo"><a href="index.html"> EVERGREEN </a></div>-->
+                     <img style="margin-left:10%;" src="img/logo.png" alt="logo">
+                </ul>
+              </div>
+
+              <div class="address1">
+                <ul>
+                    <li>New York </li>
+                    <li>3926 Anmoore Road</li>
+                    <li>New York, NY 10014</li>
+                    <li>718-749-1714</li>
+                </ul>
+              </div>
+
+              <div class="address2">
+                <ul>
+                    <li>France</li>
+                    <li>68, rue da le Couronne</li>
+                    <li>75002 PARIS</li>
+                    <li>02.94.23.69.56</li>
+                </ul>
+              </div>
+
+              <div class="address3">
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+              </div>
+              
+              <div id="copyright"><a href="#">&copy; All Rights Reserved</a></div>        
+            </div>
+      </div>
+
+</body>
+</html>

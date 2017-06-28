@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Creating a Simple Parallax Scrolling Website</title>
+ <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/styling.css"/>
+ <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+ <script>
+
+   
+<!-- JQUERY FOR SLIDING NAVIGATION-->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!-- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV-->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+</head>
+
+<body>
+<header id="header">
+<div class="content">
+<div id="logo"><a href="index.html"> EVERGREEN </a></div>
+<nav id="nav">
+ <ul>
+ <li><a href="index.html" title="Next Section">Home</a></li>
+ <li><a href="aboutus.html" class="active" title="Next Section">About Us</a></li>
+ <li><a href="services.html" title="Next Section">Services</a></li>
+ <li><a href="gallery.html" title="Next Section">Gallery</a></li>
+ <li><a href="contact-us.html" title="Next Section">Contact Us</a></li>
+ </ul>
+</nav>
+</div>
+</header>
+
+ 
+
+ <div id="slide6" style="margin-bottom: 10%;">
+ <div class="content" >
+   
+  <h1 class="ribbon">
+   <strong class="ribbon-content">ABOUT US</strong>
+</h1>
+</div>
+
+ <div class="content" >
+ <div class="quotes_container">
+  <!--
+  <p align="center" style="font-size:55px;">ABOUT US</p>-->
+
+ <h3 class="quotes" >"Evergreen is a brand name offering spectacular services in organising and managing events, festivals, and corporate as well as personal parties. The best quality of service at very reasonable rate is provided to the clients. Event management involves visualizing Evergreens, planning, budgeting, organizing and executing events such as fashion shows, musical concerts, corporate seminars, wedding celebrations, theme parties, product launching etc.  <br /><br />We, at Evergreen, help our clients achieve their objectives through the development and execution of customized special events. Maximum client satisfaction will be achieved through our involvement. Our professional experience in event planning covers every aspect of event management, which also includes a comprehensive network of relevant contacts ensuring that you are provided with a superior quality of services as well as competitive rates at every stage of event planning."</h3>
+
+ <!--<img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+ </div> 
+
+ <div id="footer">
+            <div class="wrapper">
+              <div class="social_links">
+                <ul>
+                    
+                    <!--<div id="logo"><a href="index.html"> EVERGREEN </a></div>-->
+                     <img style="margin-left:10%;" src="img/logo.png" alt="logo">
+                </ul>
+              </div>
+
+              <div class="address1">
+                <ul>
+                    <li>New York Restaurant</li>
+                    <li>3926 Anmoore Road</li>
+                    <li>New York, NY 10014</li>
+                    <li>718-749-1714</li>
+                </ul>
+              </div>
+
+              <div class="address2">
+                <ul>
+                    <li>France Restaurant</li>
+                    <li>68, rue da le Couronne</li>
+                    <li>75002 PARIS</li>
+                    <li>02.94.23.69.56</li>
+                </ul>
+              </div>
+
+              <div class="address3">
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+              </div>
+              
+              <div id="copyright"><a href="#">&copy; All Rights Reserved</a></div>        
+            </div>
+      </div>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Creating a Simple Parallax Scrolling Website</title>
+ <link rel="stylesheet" href="css/style.css"/>
+ <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+ 	<style>
+		 #content
+		{
+		    width:100%;
+		    margin-left:auto;
+		    margin-right:auto;  
+		}
+		#content ul
+		{
+		    list-style-type:none;
+		}
+		#content li
+		{
+		    float:left;
+		    /*width:175px;*/
+		    display:block;
+		    margin:20px;    
+		}
+		.gallery-img{
+		    width:500px;
+		    height:350px;
+		}
+    </style>
+ </head>
+
+<body>
+<header id="header">
+<div class="content">
+<div id="logo"><a href="index.html"> EVERGREEN </a></div>
+<nav id="nav">
+ <ul>
+ <li><a href="index.html"  title="Next Section">Home</a></li>
+ <li><a href="aboutus.html" title="Next Section">About Us</a></li>
+ <li><a href="services.html" title="Next Section">Services</a></li>
+ <li><a href="gallery.html" class="active" title="Next Section">Gallery</a></li>
+ <li><a href="contact-us.html" title="Next Section">Contact Us</a></li>
+ </ul>
+</nav>
+</div>
+</header>
+ 
+ <div id="slide6" style="margin-bottom: 10%;">
+ <div class="content">
+   <p align="center" style="font-size:55px;margin-top: 15%;">Gallery</p>
+
+
+    <div id="container">
+        <div id="content">
+            <ul>
+                <li><a href="img/gallery-md-thumb-01.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-01.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-02.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-02.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-03.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-03.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-04.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-04.jpg" /></a></li>
+            </ul>
+
+            <ul>
+            	<li><a href="img/gallery-md-thumb-07.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-07.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-09.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-09.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-06.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-06.jpg" /></a></li>
+                <li><a href="img/gallery-md-thumb-08.jpg" rel="group" class="fancybox"><img class="gallery-img" src="img/gallery-md-thumb-08.jpg" /></a></li>
+            </ul>
+           
+        </div>
+    </div>
+</div>
+</div>
+
+  <div id="footer">
+            <div class="wrapper">
+              <div class="social_links">
+                <ul>
+                    
+                    <!--<div id="logo"><a href="index.html"> EVERGREEN </a></div>-->
+                     <img style="margin-left:10%;" src="img/logo.png" alt="logo">
+                </ul>
+              </div>
+
+              <div class="address1">
+                <ul>
+                    <li>New York Restaurant</li>
+                    <li>3926 Anmoore Road</li>
+                    <li>New York, NY 10014</li>
+                    <li>718-749-1714</li>
+                </ul>
+              </div>
+
+              <div class="address2">
+                <ul>
+                    <li>France Restaurant</li>
+                    <li>68, rue da le Couronne</li>
+                    <li>75002 PARIS</li>
+                    <li>02.94.23.69.56</li>
+                </ul>
+              </div>
+
+              <div class="address3">
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+              </div>
+              
+              <div id="copyright"><a href="#">&copy; All Rights Reserved</a></div>        
+            </div>
+      </div>
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+ 
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+ 
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+</body>
+</html>
